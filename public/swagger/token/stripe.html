@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stripe</title>
+	<script src="https://js.stripe.com/v3/"></script>
+	<script>
+		function getToken() {
+			const stripe = Stripe('pk_test_QgXmNOLJrztbplv71HlwgJy5');
+			const card = {
+				number: '4242424242424242',
+				exp_month: 12,
+				exp_year: 2018,
+				cvc: '123'
+			}
+			stripe.createToken(card).then(function(result) {
+				console.log(result)
+			});
+		}
+		document.getElementById('button').addEventListener("click", getToken, false);
+	</script>
+</head>
+<body>
+<form action="/your-server-side-code" method="POST">
+	<button id="button">Get Token</button>
+</form>
+</body>
+</html>

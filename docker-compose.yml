@@ -1,0 +1,20 @@
+version: '2'
+services:
+  database:
+    image: mongo
+    ports:
+      - "27019:27017"
+    restart: always
+  api:
+    build: .
+    volumes:
+      - ./:/api
+      - /api/node_modules
+    ports:
+      - "3000:3000"
+    environment:
+      - MONGODB_URI=mongodb://database:27017/starter
+    links:
+     - database
+    depends_on:
+     - database
