@@ -16,7 +16,7 @@ This is a boilerplate of REST API on [`Nodejs`](https://nodejs.org/en/) based on
 with [`Joi validator`](https://github.com/hapijs/joi/blob/v10.6.0/API.md) and [Swagger documentation](https://swagger.io/specification/).
 Code based on ES6, async/await and as a consequence requires Node version >= 7.6.
 For example was implemented CRUD for User model and authentication using [JWT token](https://jwt.io/). Also user session with JWT token stored in db.
-The root of api is swagger ui based on [swagger.json](https://github.com/igormigunov/node-express-joi-starter/public/swagger/swagger.json).
+The root of api is swagger ui based on [swagger.json](https://github.com/igormigunov/node-express-joi-starter/blob/master/public/swagger/swagger.json).
 It can be made using `npm run yaml2json`. Package [yaml2json](https://www.npmjs.com/package/yaml2json) should be installed globally `npm install -g yaml2json`.
 
 Getting Started
@@ -42,16 +42,16 @@ npm run dev
 Project Structure
 -----------------
 * folders
- * [controllers]() - Routes modules
- * [models]() - Mongoose models
- * [module]() - Helper modules for reuse in other project modules
- * [public]() - Static content
- * [tests]() - Tests
+ * [controllers](https://github.com/igormigunov/node-express-joi-starter/tree/master/controllers) - Routes modules
+ * [models](https://github.com/igormigunov/node-express-joi-starter/tree/master/models) - Mongoose models
+ * [module](https://github.com/igormigunov/node-express-joi-starter/tree/master/modules) - Helper modules for reuse in other project modules
+ * [public](https://github.com/igormigunov/node-express-joi-starter/tree/master/public) - Static content
+ * [tests](https://github.com/igormigunov/node-express-joi-starter/tree/master/tests) - Tests
 * files
- * [index.js]() - Application Entrypoint
- * [app.js]() - Main application file
- * [.env]() - Environment Variables
- * [.env.test]() - Environment Variables for tests
+ * [index.js](https://github.com/igormigunov/node-express-joi-starter/blob/master/index.js) - Application Entrypoint
+ * [app.js](https://github.com/igormigunov/node-express-joi-starter/blob/master/app.js) - Main application file
+ * [.env](https://github.com/igormigunov/node-express-joi-starter/blob/master/.env) - Environment Variables
+ * [.env.test](https://github.com/igormigunov/node-express-joi-starter/blob/master/.env.test) - Environment Variables for tests
 * Structure based on [hackathon-starter](https://github.com/sahat/hackathon-starter)
 
 Models
@@ -69,7 +69,7 @@ with [celebrate](https://github.com/continuationlabs/celebrate) middleware in `a
 
 Swagger
 -------
-At first should be corrected [swagger.yaml]() file according to needed models.
+At first should be corrected [swagger.yaml](https://github.com/igormigunov/node-express-joi-starter/blob/master/public/swagger/swagger.yaml) file according to needed models.
 After should do `npm run yaml2json` and `swagger.json` is ready
 
 Environment Variables
@@ -80,9 +80,9 @@ Environment Variables
 
 Tests
 -----
-CRUD operations for user implemented in [test](). It contains `before` method that
+CRUD operations for user implemented in [test](https://github.com/igormigunov/node-express-joi-starter/blob/master/tests/user.crud.test.js). It contains `before` method that
 clear database before tests start. Just `npm run test` to start it.
-Test use [.env.test]() environment variables file.
+Test use [.env.test](https://github.com/igormigunov/node-express-joi-starter/blob/master/.env.test) environment variables file.
 
 Requirements
 ------------
